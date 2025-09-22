@@ -1,0 +1,163 @@
+:root {
+    --gy-light: #C9A646;
+    --gy-dark: #8C6E2A;
+    --saffron: #FF770F;
+    --red: #B22222;
+    --brown-dark: #2C1B14;
+    --white: #FFFFFF;
+    --nav-height: 80px;
+    /* height of fixed navbar */
+}
+
+
+/* Body */
+
+body {
+    margin: 0;
+    padding-top: var(--nav-height);
+    background: var(--gy-dark);
+    color: var(--brown-dark);
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    /* smooth scroll */
+}
+
+
+/* Navigation Bar */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    background: var(--brown-dark);
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+nav ul {
+    display: flex;
+    gap: 10px;
+    margin-right: 25px;
+    list-style: none;
+    padding: 0;
+}
+
+nav li button {
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+nav li button:hover {
+    color: var(--red);
+}
+
+
+/* Header */
+
+header {
+    text-align: center;
+    padding: 3rem 1rem 0.5rem;
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: var(--brown-dark);
+}
+
+
+/* Section headers */
+
+.category h2 {
+    margin: 30px 0 10px 20px;
+    font-size: 1.7rem;
+    color: var(--brown-dark);
+    position: relative;
+    padding-left: 15px;
+}
+
+.category h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    background: var(--saffron);
+    border-radius: 3px;
+}
+
+h3 {
+    margin: 20px 0 10px 0;
+    color: var(--white);
+    padding-left: 15px;
+}
+
+
+/* Category boxes */
+
+.category-box {
+    background: var(--brown-dark);
+    margin: 0 20px 30px 20px;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+
+/* Description text */
+
+.description-text p {
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--brown-dark);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.description-box {
+    margin: 0 20px 30px 20px;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+
+/* Icons */
+
+.icon {
+    display: inline-block;
+    margin: 10px;
+    background: var(--white);
+    padding: 15px;
+    border-radius: 10px;
+    color: var(--red);
+    font-size: 1.5rem;
+    transition: transform 0.2s, background 0.3s, color 0.3s;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+    background: var(--red);
+    color: var(--white);
+}
+
+
+/* Ensure scroll stops below navbar */
+
+section {
+    scroll-margin-top: var(--nav-height);
+}
